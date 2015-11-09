@@ -94,7 +94,7 @@ public class SampleCamActivity extends AbstractArchitectCamActivity {
 							// store screenCapture into external cache directory
 							final File screenCaptureFile = new File(Environment.getExternalStorageDirectory().toString(), "screenCapture_" + System.currentTimeMillis() + ".jpg");
 							
-							// 1. Save bitmap to file & compress to jpeg. You may use PNG too
+							// 1. 		Save bitmap to file & compress to jpeg. You may use PNG too
 							try {
 								final FileOutputStream out = new FileOutputStream(screenCaptureFile);
 								screenCapture.compress(Bitmap.CompressFormat.JPEG, 90, out);
@@ -109,7 +109,7 @@ public class SampleCamActivity extends AbstractArchitectCamActivity {
 								// 3. launch intent-chooser
 								final String chooserTitle = "Share Snaphot";
 								SampleCamActivity.this.startActivity(Intent.createChooser(share, chooserTitle));
-							
+
 							} catch (final Exception e) {
 								// should not occur when all permissions are set
 								SampleCamActivity.this.runOnUiThread(new Runnable() {

@@ -71,7 +71,6 @@
             android:name=".SampleCamActivity"
             android:configChanges="orientation|keyboardHidden|screenSize" />
         <!-- poi detail screen -->
-        <activity android:name=".SamplePoiDetailActivity" />
         <activity
             android:name=".Informacion"
             android:label="@string/title_activity_informacion" >
