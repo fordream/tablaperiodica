@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@drawable/fondo"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Tabla Periódica"
+        android:id="@+id/tvTitulo"
+        android:textColor="#0a0a17"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="            enriquecida con RA"
+        android:id="@+id/tvTitulo2"
+        android:textColor="#090a14"
+        android:textSize="20dp"
+        android:layout_below="@+id/tvTitulo"
+        android:layout_alignLeft="@+id/tvTitulo"
+        android:layout_alignStart="@+id/tvTitulo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Scaner"
+        android:id="@+id/btnStartCam"
+        android:layout_marginTop="74dp"
+        android:layout_below="@+id/tvTitulo2"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="30dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar Elementos"
+        android:id="@+id/btnShow"
+        android:layout_gravity="center_horizontal"
+        android:onClick="ShowElements"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Información"
+        android:id="@+id/btnInfo"
+        android:onClick="informacion"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/btnShow"
+        android:layout_alignRight="@+id/btnStartCam"
+        android:layout_alignEnd="@+id/btnStartCam" />
+</LinearLayout>
