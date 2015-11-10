@@ -12,7 +12,12 @@ var World = {
 			Important: If you replace the tracker file with your own, make sure to change the target name accordingly.
 			Use a specific target name to respond only to a certain target or use a wildcard to respond to any or a certain group of targets.
 		*/
-		this.tracker = new AR.ClientTracker("assets/magazine.wtc", {
+
+		this.tracker = new AR.ClientTracker("assets/He.wtc", {
+			onLoaded: this.worldLoaded
+		});
+
+	this.tracker = new AR.ClientTracker("assets/H.wtc", {
 			onLoaded: this.worldLoaded
 		});
 
@@ -21,11 +26,19 @@ var World = {
 		*/
 
 		/* Create overlay for page one */
-		var imgOne = new AR.ImageResource("assets/imageOne.png");
+		var imgOne = new AR.ImageResource("assets/He.png");
 		var overlayOne = new AR.ImageDrawable(imgOne, .5, {
 			offsetX: -0.15,
 			offsetY: 0
 		});
+
+			var imgOne = new AR.ImageResource("assets/h.png");
+        		var overlayOne = new AR.ImageDrawable(imgOne, .5, {
+        			offsetX: -0.15,
+        			offsetY: 0
+        		});
+
+
 
 		/*
 			The last line combines everything by creating an AR.Trackable2DObject with the previously created tracker, the name of the image target and the drawable that should augment the recognized image.
